@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NavController } from 'ionic-angular';
+import { ToastController } from 'ionic-angular';
 
 @Component({
   selector: 'app-home',
@@ -28,6 +30,15 @@ export class HomePage {
     }
   ];
 
-  constructor() {}
+  constructor() {
 
+  }
+  removeItem(item){
+    console.log("Removing Item -", item)
+    const toast = this.toastCtrl.create({
+      message = 'Removing Item - ' + item.name + "...",
+      duration: 3000
+    })
+    toast.present();
+  }
 }

@@ -12,8 +12,11 @@
               <h2>{{item.name}}</h2>
               <p>{{item.quantity}}</p>
             </ion-item>
-            <ion-item-options side="end">
-              <ion-item-option onClick="trash(item)">Delete</ion-item-option>
+            <ion-item-options>
+              <button (click) = "removeItem(item)" ion-button color="secondary" icon-start>
+                <ion-icon name="trash"></ion-icon>
+                Done
+              </button>
             </ion-item-options>
           </ion-item-sliding>
         
